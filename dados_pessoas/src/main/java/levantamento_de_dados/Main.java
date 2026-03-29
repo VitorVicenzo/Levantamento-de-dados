@@ -36,18 +36,18 @@ public class Main {
             if (vect_Person[i].getHeight()>grt_Height) {
                 grt_Height = vect_Person[i].getHeight();
             }
-            if (vect_Person[i].getSex() == "F") {
+            if (vect_Person[i].getSex().equals("F")) {
                 sum_Height_Women += vect_Person[i].getHeight();
                 women_Index++;
             }
-            if (vect_Person[i].getSex() == "M") {
+            if (vect_Person[i].getSex().equals("M")) {
                 count_Men++;
             }
         }
         double average_Women = sum_Height_Women/women_Index;
         System.out.println("Menor altura = " + min_Height);
         System.out.println("Maior altura = " + grt_Height);
-        System.out.println("Média das alturas das mulheres = " + average_Women);
+        System.out.printf("Média das alturas das mulheres = %.2f%n", average_Women);
         System.out.println("Numero de homens = " + count_Men);
     }
 }
