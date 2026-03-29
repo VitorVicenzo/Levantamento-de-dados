@@ -23,15 +23,14 @@ public class Main {
             vect_Person[i] = new Person(height, sex);
         }
 
-        double min_Height = 0.0;
+        double min_Height = 3.0;
         double grt_Height = 0.0;
         double sum_Height_Women = 0.0;
         int women_Index = 0;
         
         int count_Men = 0;
         for (int i = 0; i < n; i++) {
-            min_Height = vect_Person[i].getHeight();
-            if (vect_Person[i].getHeight()<=min_Height) {
+            if (vect_Person[i].getHeight()<min_Height) {
                 min_Height = vect_Person[i].getHeight();
             }
             if (vect_Person[i].getHeight()>grt_Height) {
